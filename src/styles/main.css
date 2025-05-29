@@ -5,9 +5,10 @@
 @theme {
 	--font-*: initial;
 	--font-heading: sans-serif;
-	--font-body: sans-serif;
+	--font-body: Raleway, sans-serif;
 
-	--color-brand-primary: ;
+	--color-brand-primary: #737373;
+	--color-brand-secondary: #d2d2d2;
 }
 
 @utility container {
