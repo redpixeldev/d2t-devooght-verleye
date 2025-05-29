@@ -1,0 +1,17 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+---
+
+<Layout title='Astro'>
+	<Header />
+	<div class="relative h-[25rem] md:h-[27rem] lg:h-[33rem] xl:h-[36rem]">
+		<img src="/img/hero-homepage.jpeg" class="absolute inset-0 w-full h-full object-cover z-10" alt="">
+		<div class="h-24 md:h-32 w-3/5 sm:w-[35%] md:w-2/5 absolute top-1/2 -translate-y-1/2 left-0 bg-linear-to-r from-black z-20"></div>
+		<div class="container flex items-center h-full relative z-30">
+			<h1 class="uppercase text-white text-4xl md:text-5xl lg:text-6xl font-medium lg:pl-10 xl:pl-24">DIENSTEN</h1>
+		</div>
+	</div>
+	<Footer />
+</Layout>

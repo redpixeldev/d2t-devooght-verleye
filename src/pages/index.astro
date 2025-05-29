@@ -6,10 +6,15 @@ import Footer from '@components/Footer.astro';
 
 <Layout title='Astro'>
 	<Header />
-	<div class=''>
-		<h1 class='mt-4 text-xl'>Home</h1>
-		<p>This is the Astro homepage page.</p>
-		<img src='/img/icon-home.png' />
+	<div class="relative h-[27rem] md:h-[33rem] lg:h-[40rem] xl:h-[45rem]">
+		<img src="/img/hero-homepage.jpeg" class="absolute inset-0 w-full h-full object-cover z-10" alt="">
+		<div class="w-full h-full relative z-30 flex gap-1 justify-center items-end pb-4">
+			<div class="border border-white p-px rounded-full size-3">
+				<div class="rounded-full w-full h-full border-2 border-transparent bg-white"></div>
+			</div>
+			<div class="rounded-full size-3 border border-white bg-transparent"></div>
+			<div class="rounded-full size-3 border border-white bg-transparent"></div>
+		</div>
 	</div>
 	<Footer />
 </Layout>
