@@ -6,208 +6,247 @@ import Footer from '@components/Footer.astro';
 
 <Layout title='Astro'>
 	<Header />
-	<div class="relative h-[27rem] md:h-[33rem] lg:h-[40rem] xl:h-[45rem]">
-		<img src="/img/hero-homepage.jpeg" class="absolute inset-0 w-full h-full object-cover z-10" alt="">
-		<div class="w-full h-full relative z-30 flex gap-1 justify-center items-end pb-4">
-			<div class="border border-white p-px rounded-full size-3">
-				<div class="rounded-full w-full h-full border-2 border-transparent bg-white"></div>
-			</div>
-			<div class="rounded-full size-3 border border-white bg-transparent"></div>
-			<div class="rounded-full size-3 border border-white bg-transparent"></div>
-		</div>
-	</div>
 	<div class="relative">
-		<div class="bg-black h-[92%] w-full absolute inset-0"></div>
-		<div class="container pt-12 lg:pt-16 relative z-30">
-			<div class="text-center lg:w-3/5 xl:w-1/2 mx-auto pb-10 lg:pb-12">
-				<h2 class="font-bold text-white text-xl pb-5">Devooght Verleye</h2>
-				<p class="text-white font-light text-sm pb-4 lg:pb-5">Devooght Verleye serumque restia aut eicid endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus devooght VerleyeSerumque restia aut eicid endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus</p>
-				<a href="/" class="uppercase text-white font-medium text-sm hover:underline hover:font-bold">MEER OVER ONS</a>
-			</div>
-			<div class="flex flex-wrap lg:flex-nowrap lg:flex-row gap-5 xl:gap-8 justify-center">
-					<div class="relative flex items-end w-full sm:w-[31%] lg:w-1/5 h-64 xl:h-72">
-						<img src="/img/hero-homepage.jpeg" class="absolute inset-0 w-full h-full object-cover" alt="">
-						<div class="absolute z-20 w-full h-full bg-linear-to-b from-black hover:from-white to-brand-primary opacity-75 transition-colors duration-300 ease-linear hover:to-transparent to-30%"></div>
-						<div class="relative z-30 pb-3 flex justify-center w-full">
-							<h3 class="text-center font-bold text-[15px]/[15px] text-white uppercase">FEED</h3>
-						</div>
+		<!-- POPUP -->
+		<div class="absolute bg-black/80 inset-0 w-full h-full z-[999] hidden">
+			<div class="relative h-auto mt-52 sm:mt-64 sm:min-w-[510px] max-w-[510px] mx-4 sm:mx-auto bg-white">
+				<img src="/img/bg-black-shape.png" class="absolute w-full top-0 inset-x-0" alt="">
+				<svg class="absolute top-3 right-3 absolute h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"></path></svg>
+				<div class="px-4 sm:px-10 py-6 sm:py-8 relative z-20">
+					<div class="pb-5">
+						<h2 class="font-bold text-white text-lg pb-2">Prijsofferte aanvragen</h2>
+						<p class="text-white font-light text-xs">Vul onderstaand formulier in en wij nemen zo snel mogelijk contact met u op in verband met uw vraag of prijsaanvraag.</p>
 					</div>
-					<div class="relative flex items-end w-full sm:w-[31%] lg:w-1/5 h-64 xl:h-72">
-						<img src="/img/bg-foods.jpeg" class="absolute inset-0 w-full h-full object-cover" alt="">
-						<div class="absolute z-20 w-full h-full bg-linear-to-b from-black hover:from-white to-brand-primary opacity-75 transition-colors duration-300 ease-linear hover:to-transparent to-30%"></div>
-						<div class="relative z-30 pb-3 flex justify-center w-full">
-							<h3 class="text-center font-bold text-[15px]/[15px] text-white uppercase">FOOD</h3>
+					<form class="pt-6 sm:pt-10 pb-5 sm:pb-8 px-4 sm:px-10 shadow-[6px_6px_6px_4px_rgba(0,_0,_0,_0.28)] bg-white space-y-3 sm:space-y-4">
+						<div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+							<input type="text" name="name" id="name" class="placeholder-black text-[10px]/[12px] px-2 font-light py-[2px] border border-brand-primary bg-transparent w-full" placeholder="Naam">
+							<input type="text" name="lastname" id="lastname" class="placeholder-black text-[10px]/[12px] px-2 font-light py-[2px] border border-brand-primary bg-transparent w-full" placeholder="Voornaam">
 						</div>
-					</div>
-					<div class="relative flex items-end w-full sm:w-[31%] lg:w-1/5 h-64 xl:h-72">
-						<img src="/img/bg-technics.jpeg" class="absolute inset-0 w-full h-full object-cover" alt="">
-						<div class="absolute z-20 w-full h-full bg-linear-to-b from-black hover:from-white to-brand-primary opacity-75 transition-colors duration-300 ease-linear hover:to-transparent to-30%"></div>
-						<div class="relative z-30 pb-3 flex justify-center w-full">
-							<h3 class="text-center font-bold text-[15px]/[15px] text-white uppercase">TECHNICS</h3>
+						<div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+							<input type="text" name="tel" id="tel" class="placeholder-black text-[10px]/[12px] px-2 font-light py-[2px] border border-brand-primary bg-transparent w-full" placeholder="Tel">
+							<input type="email" name="email" id="email" class="placeholder-black text-[10px]/[12px] px-2 font-light py-[2px] border border-brand-primary bg-transparent w-full" placeholder="E-mail">
 						</div>
-					</div>
-					<div class="relative flex items-end w-full sm:w-[31%] lg:w-1/5 h-64 xl:h-72">
-						<img src="/img/bg-container.jpeg" class="absolute inset-0 w-full h-full object-cover" alt="">
-						<div class="absolute z-20 w-full h-full bg-linear-to-b from-black hover:from-white to-brand-primary opacity-75 transition-colors duration-300 ease-linear hover:to-transparent to-30%"></div>
-						<div class="relative z-30 pb-3 flex justify-center w-full">
-							<h3 class="text-center font-bold text-[15px]/[15px] text-white uppercase">CONTAINER</h3>
+						<input type="text" name="company-name" id="company-name" class="placeholder-black text-[10px]/[12px] px-2 font-light py-[2px] border border-brand-primary bg-transparent w-full" placeholder="Bedrijfsnaam">
+						<textarea name="message" id="message" class="placeholder-black text-[10px]/[12px] px-2 font-light py-[2px] border border-brand-primary bg-transparent w-full h-24">Bericht</textarea>
+						<div class="border-2 border-dashed border-brand-primary p-2 rounded-md bg-[#f0f0f0]">
+							<div class="flex flex-col justify-center">
+								<p class="text-center text-[10px]">Bestand of afbeelding toevoegen.</p>
+								<img src="/img/icon-upload-image.png" class="h-4 w-auto mx-auto" alt="">
+							</div>
 						</div>
-					</div>
-					<div class="relative flex items-end w-full sm:w-[31%] lg:w-1/5 h-64 xl:h-72">
-						<img src="/img/bg-technical-services.jpeg" class="absolute inset-0 w-full h-full object-cover" alt="">
-						<div class="absolute z-20 w-full h-full bg-linear-to-b from-black hover:from-white to-brand-primary opacity-75 transition-colors duration-300 ease-linear hover:to-transparent to-30%"></div>
-						<div class="relative z-30 pb-3 flex justify-center w-full">
-							<h3 class="text-center font-bold text-[15px]/[15px] text-white uppercase">TECHNICAL SERVICES</h3>
+						<div class="flex justify-center mt-9">
+							<button class="uppercase font-light hover:text-black/50 hover:border-black/50 px-3 transition-colors duration-300 ease-linear border border-brand-primary rounded-full">VERZENDEN</button>
 						</div>
+					</form>
+					<div class="flex justify-center mt-6 sm:mt-8">
+						<p class="uppercase text-center font-light text-[10px]">SLUITEN</p>
 					</div>
 				</div>
-		</div>
-	</div>
-	<div class="container py-12 md:py-16">
-		<div class="text-center lg:w-3/5 xl:w-1/2 mx-auto pb-10">
-			<h2 class="font-bold text-xl pb-5">Waarom u voor ons zou kiezen?</h2>
-			<div class="prose max-w-full text-black prose-p:text-xs prose-p:font-light">
-				<p>Devooght VerleyeSerumque restia aut eicid endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus devooght VerleyeSerumque restia aut eicid endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus</p>
-				<p>Endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus</p>
 			</div>
 		</div>
-		<div class="grid sm:grid-cols-3 lg:px-16 xl:px-40 items-center gap-5 lg:gap-7">
-			<div class="relative">
-				<div class="border border-[#d6d6d6] opacity-100 hover:opacity-0 transition-colors duration-300">
-					<div class="flex flex-col justify-center items-center py-7 xl:py-8">
-						<img src="/img/icon-quality.svg" class="h-16 lg:h-20" alt="">
-						<div class="flex flex-col text-center justify-center pt-5">
-							<h3 class="font-bold text-sm">Kwaliteit</h3>
-							<button class="uppercase text-xs font-light">MEER INFO</button>
-						</div>
-					</div>
+		<div class="relative h-[27rem] md:h-[33rem] lg:h-[40rem] xl:h-[45rem]">
+			<img src="/img/hero-homepage.jpeg" class="absolute inset-0 w-full h-full object-cover z-10" alt="">
+			<div class="w-full h-full relative z-30 flex gap-1 justify-center items-end pb-4">
+				<div class="border border-white p-px rounded-full size-3">
+					<div class="rounded-full w-full h-full border-2 border-transparent bg-white"></div>
 				</div>
-				<div class="absolute inset-0 w-full h-full border-2 border-[#d6d6d6] opacity-0 hover:opacity-100 transition-colors duration-300 bg-black">
-					<div class="py-3 px-4">
-						<div class="flex items-center gap-3 pb-3">
-							<img src="/img/icon-quality-white.png" class="h-9" alt="">
-							<p class="font-bold text-[15px] text-white">Kwaliteit</p>
+				<div class="rounded-full size-3 border border-white bg-transparent"></div>
+				<div class="rounded-full size-3 border border-white bg-transparent"></div>
+			</div>
+		</div>
+		<div class="relative">
+			<div class="bg-black h-[92%] w-full absolute inset-0"></div>
+			<div class="container pt-12 lg:pt-16 relative z-30">
+				<div class="text-center lg:w-3/5 xl:w-1/2 mx-auto pb-10 lg:pb-12">
+					<h2 class="font-bold text-white text-xl pb-5">Devooght Verleye</h2>
+					<p class="text-white font-light text-sm pb-4 lg:pb-5">Devooght Verleye serumque restia aut eicid endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus devooght VerleyeSerumque restia aut eicid endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus</p>
+					<a href="/" class="uppercase text-white font-medium text-sm hover:underline hover:font-bold">MEER OVER ONS</a>
+				</div>
+				<div class="flex flex-wrap lg:flex-nowrap lg:flex-row gap-5 xl:gap-8 justify-center">
+						<div class="relative flex items-end w-full sm:w-[31%] lg:w-1/5 h-64 xl:h-72">
+							<img src="/img/hero-homepage.jpeg" class="absolute inset-0 w-full h-full object-cover" alt="">
+							<div class="absolute z-20 w-full h-full bg-linear-to-b from-black hover:from-white to-brand-primary opacity-75 transition-colors duration-300 ease-linear hover:to-transparent to-30%"></div>
+							<div class="relative z-30 pb-3 flex justify-center w-full">
+								<h3 class="text-center font-bold text-[15px]/[15px] text-white uppercase">FEED</h3>
+							</div>
 						</div>
-						<div class="prose max-w-full text-white prose-p:text-[10px]/[12px] prose-p:font-light">
-							<p>Devooght VerleyeSerumque restia aut eicid endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus devooght VerleyeSerumque restia aut eicid endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus</p>
-							<p>Endere sitiisquatis ut et, anienis solupta turios et </p>
+						<div class="relative flex items-end w-full sm:w-[31%] lg:w-1/5 h-64 xl:h-72">
+							<img src="/img/bg-foods.jpeg" class="absolute inset-0 w-full h-full object-cover" alt="">
+							<div class="absolute z-20 w-full h-full bg-linear-to-b from-black hover:from-white to-brand-primary opacity-75 transition-colors duration-300 ease-linear hover:to-transparent to-30%"></div>
+							<div class="relative z-30 pb-3 flex justify-center w-full">
+								<h3 class="text-center font-bold text-[15px]/[15px] text-white uppercase">FOOD</h3>
+							</div>
+						</div>
+						<div class="relative flex items-end w-full sm:w-[31%] lg:w-1/5 h-64 xl:h-72">
+							<img src="/img/bg-technics.jpeg" class="absolute inset-0 w-full h-full object-cover" alt="">
+							<div class="absolute z-20 w-full h-full bg-linear-to-b from-black hover:from-white to-brand-primary opacity-75 transition-colors duration-300 ease-linear hover:to-transparent to-30%"></div>
+							<div class="relative z-30 pb-3 flex justify-center w-full">
+								<h3 class="text-center font-bold text-[15px]/[15px] text-white uppercase">TECHNICS</h3>
+							</div>
+						</div>
+						<div class="relative flex items-end w-full sm:w-[31%] lg:w-1/5 h-64 xl:h-72">
+							<img src="/img/bg-container.jpeg" class="absolute inset-0 w-full h-full object-cover" alt="">
+							<div class="absolute z-20 w-full h-full bg-linear-to-b from-black hover:from-white to-brand-primary opacity-75 transition-colors duration-300 ease-linear hover:to-transparent to-30%"></div>
+							<div class="relative z-30 pb-3 flex justify-center w-full">
+								<h3 class="text-center font-bold text-[15px]/[15px] text-white uppercase">CONTAINER</h3>
+							</div>
+						</div>
+						<div class="relative flex items-end w-full sm:w-[31%] lg:w-1/5 h-64 xl:h-72">
+							<img src="/img/bg-technical-services.jpeg" class="absolute inset-0 w-full h-full object-cover" alt="">
+							<div class="absolute z-20 w-full h-full bg-linear-to-b from-black hover:from-white to-brand-primary opacity-75 transition-colors duration-300 ease-linear hover:to-transparent to-30%"></div>
+							<div class="relative z-30 pb-3 flex justify-center w-full">
+								<h3 class="text-center font-bold text-[15px]/[15px] text-white uppercase">TECHNICAL SERVICES</h3>
+							</div>
 						</div>
 					</div>
+			</div>
+		</div>
+		<div class="container py-12 md:py-16">
+			<div class="text-center lg:w-3/5 xl:w-1/2 mx-auto pb-10">
+				<h2 class="font-bold text-xl pb-5">Waarom u voor ons zou kiezen?</h2>
+				<div class="prose max-w-full text-black prose-p:text-xs prose-p:font-light">
+					<p>Devooght VerleyeSerumque restia aut eicid endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus devooght VerleyeSerumque restia aut eicid endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus</p>
+					<p>Endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus</p>
 				</div>
 			</div>
+			<div class="grid sm:grid-cols-3 lg:px-16 xl:px-40 items-center gap-5 lg:gap-7">
 				<div class="relative">
-				<div class="border border-[#d6d6d6] opacity-100 hover:opacity-0 transition-colors duration-300">
-					<div class="flex flex-col justify-center items-center py-7 xl:py-8">
-						<img src="/img/icon-range.svg" class="h-16 lg:h-20" alt="">
-						<div class="flex flex-col text-center justify-center pt-5">
-							<h3 class="font-bold text-sm">Actieradius</h3>
-							<button class="uppercase text-xs font-light">MEER INFO</button>
+					<div class="border border-[#d6d6d6] opacity-100 hover:opacity-0 transition-colors duration-300">
+						<div class="flex flex-col justify-center items-center py-7 xl:py-8">
+							<img src="/img/icon-quality.svg" class="h-16 lg:h-20" alt="">
+							<div class="flex flex-col text-center justify-center pt-5">
+								<h3 class="font-bold text-sm">Kwaliteit</h3>
+								<button class="uppercase text-xs font-light">MEER INFO</button>
+							</div>
+						</div>
+					</div>
+					<div class="absolute inset-0 w-full h-full border-2 border-[#d6d6d6] opacity-0 hover:opacity-100 transition-colors duration-300 bg-black">
+						<div class="py-3 px-4">
+							<div class="flex items-center gap-3 pb-3">
+								<img src="/img/icon-quality-white.png" class="h-9" alt="">
+								<p class="font-bold text-[15px] text-white">Kwaliteit</p>
+							</div>
+							<div class="prose max-w-full text-white prose-p:text-[10px]/[12px] prose-p:font-light">
+								<p>Devooght VerleyeSerumque restia aut eicid endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus devooght VerleyeSerumque restia aut eicid endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus</p>
+								<p>Endere sitiisquatis ut et, anienis solupta turios et </p>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="absolute inset-0 w-full h-full border-2 border-[#d6d6d6] opacity-0 hover:opacity-100 transition-colors duration-300 bg-black">
-					<div class="py-3 px-4">
-						<div class="flex items-center gap-3 pb-3">
-							<img src="/img/icon-range-white.png" class="h-9" alt="">
-							<p class="font-bold text-[15px] text-white">Actieradius</p>
+					<div class="relative">
+					<div class="border border-[#d6d6d6] opacity-100 hover:opacity-0 transition-colors duration-300">
+						<div class="flex flex-col justify-center items-center py-7 xl:py-8">
+							<img src="/img/icon-range.svg" class="h-16 lg:h-20" alt="">
+							<div class="flex flex-col text-center justify-center pt-5">
+								<h3 class="font-bold text-sm">Actieradius</h3>
+								<button class="uppercase text-xs font-light">MEER INFO</button>
+							</div>
 						</div>
-						<div class="prose max-w-full text-white prose-p:text-[10px]/[12px] prose-p:font-light">
-							<p>Devooght VerleyeSerumque restia aut eicid endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus devooght VerleyeSerumque restia aut eicid endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus</p>
-							<p>Endere sitiisquatis ut et, anienis solupta turios et </p>
+					</div>
+					<div class="absolute inset-0 w-full h-full border-2 border-[#d6d6d6] opacity-0 hover:opacity-100 transition-colors duration-300 bg-black">
+						<div class="py-3 px-4">
+							<div class="flex items-center gap-3 pb-3">
+								<img src="/img/icon-range-white.png" class="h-9" alt="">
+								<p class="font-bold text-[15px] text-white">Actieradius</p>
+							</div>
+							<div class="prose max-w-full text-white prose-p:text-[10px]/[12px] prose-p:font-light">
+								<p>Devooght VerleyeSerumque restia aut eicid endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus devooght VerleyeSerumque restia aut eicid endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus</p>
+								<p>Endere sitiisquatis ut et, anienis solupta turios et </p>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-				<div class="relative">
-				<div class="border border-[#d6d6d6] opacity-100 hover:opacity-0 transition-colors duration-300">
-					<div class="flex flex-col justify-center items-center py-7 xl:py-8">
-						<img src="/img/icon-truck.svg" class="h-16 lg:h-20" alt="">
-						<div class="flex flex-col text-center justify-center pt-5">
-							<h3 class="font-bold text-sm">Vloot</h3>
-							<button class="uppercase text-xs font-light">MEER INFO</button>
+					<div class="relative">
+					<div class="border border-[#d6d6d6] opacity-100 hover:opacity-0 transition-colors duration-300">
+						<div class="flex flex-col justify-center items-center py-7 xl:py-8">
+							<img src="/img/icon-truck.svg" class="h-16 lg:h-20" alt="">
+							<div class="flex flex-col text-center justify-center pt-5">
+								<h3 class="font-bold text-sm">Vloot</h3>
+								<button class="uppercase text-xs font-light">MEER INFO</button>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="absolute inset-0 w-full h-full border-2 border-[#d6d6d6] opacity-0 hover:opacity-100 transition-colors duration-300 bg-black">
-					<div class="py-3 px-4">
-						<div class="flex items-center gap-3 pb-3">
-							<img src="/img/icon-truck-white.png" class="h-9" alt="">
-							<p class="font-bold text-[15px] text-white">Vloot</p>
-						</div>
-						<div class="prose max-w-full text-white prose-p:text-[10px]/[12px] prose-p:font-light">
-							<p>Devooght VerleyeSerumque restia aut eicid endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus devooght VerleyeSerumque restia aut eicid endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus</p>
-							<p>Endere sitiisquatis ut et, anienis solupta turios et </p>
+					<div class="absolute inset-0 w-full h-full border-2 border-[#d6d6d6] opacity-0 hover:opacity-100 transition-colors duration-300 bg-black">
+						<div class="py-3 px-4">
+							<div class="flex items-center gap-3 pb-3">
+								<img src="/img/icon-truck-white.png" class="h-9" alt="">
+								<p class="font-bold text-[15px] text-white">Vloot</p>
+							</div>
+							<div class="prose max-w-full text-white prose-p:text-[10px]/[12px] prose-p:font-light">
+								<p>Devooght VerleyeSerumque restia aut eicid endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus devooght VerleyeSerumque restia aut eicid endere sitiisquatis ut et, anienis solupta turios et volorep erumquam inctium et earcid ex eserae pro beatis arum nus</p>
+								<p>Endere sitiisquatis ut et, anienis solupta turios et </p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="relative">
-		<img src="/img/hero-homepage.jpeg" class="absolute inset-0 w-full h-full object-cover opacity-70" alt="">
-		<div class="absolute inset-0 bg-linear-to-r from-black/60 to-black/30 w-full h-full z-20"></div>
-		<div class="container py-10 relative z-40">
-			<div class="lg:px-16 xl:px-52 flex flex-col md:flex-row gap-12 lg:gap-16 items-center">
-				<div class="md:w-1/2">
-					<h2 class="text-white font-bold text-3xl">Wilt u een vraag aan ons stellen?</h2>
-				</div>
-				<form class="md:w-1/2 space-y-2">
-					<input type="text" name="name" id="name" class="text-white placeholder-white font-medium text-[15px] p-0 border-b border-t-0 border-r-0 border-l-0 border-white bg-transparent w-full" placeholder="Naam">
-					<input type="text" name="tel" id="tel" class="text-white placeholder-white font-medium text-[15px] p-0 border-b border-t-0 border-r-0 border-l-0 border-white bg-transparent w-full" placeholder="Tel">
-					<input type="email" name="email" id="email" class="text-white placeholder-white font-medium text-[15px] p-0 border-b border-t-0 border-r-0 border-l-0 border-white bg-transparent w-full" placeholder="E-mail">
-					<textarea name="message" id="message" class="text-white placeholder-white font-medium text-[15px] p-0 border-b border-t-0 border-r-0 border-l-0 border-white bg-transparent w-full h-24">Bericht</textarea>
-					<div class="flex justify-end">
-						<button class="uppercase font-bold text-white text-[15px] hover:text-[#62d3f3] transition-colors duration-300 ease-linear">VERZENDEN</button>
+		<div class="relative">
+			<img src="/img/hero-homepage.jpeg" class="absolute inset-0 w-full h-full object-cover opacity-70" alt="">
+			<div class="absolute inset-0 bg-linear-to-r from-black/60 to-black/30 w-full h-full z-20"></div>
+			<div class="container py-10 relative z-40">
+				<div class="lg:px-16 xl:px-52 flex flex-col md:flex-row gap-12 lg:gap-16 items-center">
+					<div class="md:w-1/2">
+						<h2 class="text-white font-bold text-3xl">Wilt u een vraag aan ons stellen?</h2>
 					</div>
-				</form>
+					<form class="md:w-1/2 space-y-2">
+						<input type="text" name="name" id="name" class="text-white placeholder-white font-medium text-[15px] p-0 border-b border-t-0 border-r-0 border-l-0 border-white bg-transparent w-full" placeholder="Naam">
+						<input type="text" name="tel" id="tel" class="text-white placeholder-white font-medium text-[15px] p-0 border-b border-t-0 border-r-0 border-l-0 border-white bg-transparent w-full" placeholder="Tel">
+						<input type="email" name="email" id="email" class="text-white placeholder-white font-medium text-[15px] p-0 border-b border-t-0 border-r-0 border-l-0 border-white bg-transparent w-full" placeholder="E-mail">
+						<textarea name="message" id="message" class="text-white placeholder-white font-medium text-[15px] p-0 border-b border-t-0 border-r-0 border-l-0 border-white bg-transparent w-full h-24">Bericht</textarea>
+						<div class="flex justify-end">
+							<button class="uppercase font-bold text-white text-[15px] hover:text-[#62d3f3] transition-colors duration-300 ease-linear">VERZENDEN</button>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="container lg:pb-2 pt-14 lg:pt-16 xl:pt-20">
-		<div class="lg:px-10 xl:xl:px-40 flex gap-4 lg:gap-10 items-center justify-between">
-			<svg class="h-8 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"></path></svg>
-			<div class="grid md:grid-cols-3 gap-4 lg:gap-10">
-				<div class="border border-[#d7d7d7] relative">
-					<div class="absolute inset-0 w-full h-full bg-linear-to-b from-brand-primary to white "></div>
-					<div>
-						<img src="/img/woman-in-computer.jpeg" class="object-cover h-40 w-full opacity-60" alt="">
+		<div class="container lg:pb-2 pt-14 lg:pt-16 xl:pt-20">
+			<div class="lg:px-10 xl:xl:px-40 flex gap-4 lg:gap-10 items-center justify-between">
+				<svg class="h-8 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"></path></svg>
+				<div class="grid md:grid-cols-3 gap-4 lg:gap-10">
+					<div class="border border-[#d7d7d7] relative">
+						<div class="absolute inset-0 w-full h-full bg-linear-to-b from-brand-primary to white "></div>
+						<div>
+							<img src="/img/woman-in-computer.jpeg" class="object-cover h-40 w-full opacity-60" alt="">
+						</div>
+						<div class="px-5 pt-5 pb-4 relative z-40">
+							<h3 class="font-bold text-black pb-4 text-base/[18px]"><span class="text-white block">Vacature</span> administratief medewerker</h3>
+							<p class="text-[10px]/[11px] font-light pb-5">Lorestist mincto bero mostis autem. Faccusdam quianiminum num vendi intota es plit vel int At molectiatur rest voluptatur as dernatum doluptatibus</p>
+							<div class="flex justify-end">
+								<a href="/" class="text-[10px]/[11px] font-light hover:font-bold transition-colors duration-300 ease-linear">lees meer</a>
+							</div>
+						</div>
 					</div>
-					<div class="px-5 pt-5 pb-4 relative z-40">
-						<h3 class="font-bold text-black pb-4 text-base/[18px]"><span class="text-white block">Vacature</span> administratief medewerker</h3>
-						<p class="text-[10px]/[11px] font-light pb-5">Lorestist mincto bero mostis autem. Faccusdam quianiminum num vendi intota es plit vel int At molectiatur rest voluptatur as dernatum doluptatibus</p>
-						<div class="flex justify-end">
-							<a href="/" class="text-[10px]/[11px] font-light hover:font-bold transition-colors duration-300 ease-linear">lees meer</a>
+					<div class="border border-[#d7d7d7] relative">
+						<div class="absolute inset-0 w-full h-full bg-linear-to-b from-brand-primary to white "></div>
+						<div>
+							<img src="/img/woman-in-computer.jpeg" class="object-cover h-40 w-full opacity-60" alt="">
+						</div>
+						<div class="px-5 pt-5 pb-4 relative z-40">
+							<h3 class="font-bold text-black pb-4 text-base/[18px]"><span class="text-white block">Vacature</span> administratief medewerker</h3>
+							<p class="text-[10px]/[11px] font-light pb-5">Lorestist mincto bero mostis autem. Faccusdam quianiminum num vendi intota es plit vel int At molectiatur rest voluptatur as dernatum doluptatibus</p>
+							<div class="flex justify-end">
+								<a href="/" class="text-[10px]/[11px] font-light hover:font-bold transition-colors duration-300 ease-linear">lees meer</a>
+							</div>
+						</div>
+					</div>
+					<div class="border border-[#d7d7d7] relative">
+						<div class="absolute inset-0 w-full h-full bg-linear-to-b from-brand-primary to white "></div>
+						<div>
+							<img src="/img/woman-in-computer.jpeg" class="object-cover h-40 w-full opacity-60" alt="">
+						</div>
+						<div class="px-5 pt-5 pb-4 relative z-40">
+							<h3 class="font-bold text-black pb-4 text-base/[18px]"><span class="text-white block">Vacature</span> administratief medewerker</h3>
+							<p class="text-[10px]/[11px] font-light pb-5">Lorestist mincto bero mostis autem. Faccusdam quianiminum num vendi intota es plit vel int At molectiatur rest voluptatur as dernatum doluptatibus</p>
+							<div class="flex justify-end">
+								<a href="/" class="text-[10px]/[11px] font-light hover:font-bold transition-colors duration-300 ease-linear">lees meer</a>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="border border-[#d7d7d7] relative">
-					<div class="absolute inset-0 w-full h-full bg-linear-to-b from-brand-primary to white "></div>
-					<div>
-						<img src="/img/woman-in-computer.jpeg" class="object-cover h-40 w-full opacity-60" alt="">
-					</div>
-					<div class="px-5 pt-5 pb-4 relative z-40">
-						<h3 class="font-bold text-black pb-4 text-base/[18px]"><span class="text-white block">Vacature</span> administratief medewerker</h3>
-						<p class="text-[10px]/[11px] font-light pb-5">Lorestist mincto bero mostis autem. Faccusdam quianiminum num vendi intota es plit vel int At molectiatur rest voluptatur as dernatum doluptatibus</p>
-						<div class="flex justify-end">
-							<a href="/" class="text-[10px]/[11px] font-light hover:font-bold transition-colors duration-300 ease-linear">lees meer</a>
-						</div>
-					</div>
-				</div>
-				<div class="border border-[#d7d7d7] relative">
-					<div class="absolute inset-0 w-full h-full bg-linear-to-b from-brand-primary to white "></div>
-					<div>
-						<img src="/img/woman-in-computer.jpeg" class="object-cover h-40 w-full opacity-60" alt="">
-					</div>
-					<div class="px-5 pt-5 pb-4 relative z-40">
-						<h3 class="font-bold text-black pb-4 text-base/[18px]"><span class="text-white block">Vacature</span> administratief medewerker</h3>
-						<p class="text-[10px]/[11px] font-light pb-5">Lorestist mincto bero mostis autem. Faccusdam quianiminum num vendi intota es plit vel int At molectiatur rest voluptatur as dernatum doluptatibus</p>
-						<div class="flex justify-end">
-							<a href="/" class="text-[10px]/[11px] font-light hover:font-bold transition-colors duration-300 ease-linear">lees meer</a>
-						</div>
-					</div>
-				</div>
+				<svg class="h-8 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path></svg>
 			</div>
-			<svg class="h-8 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path></svg>
 		</div>
 	</div>
 	<Footer />
