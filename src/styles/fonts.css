@@ -1,15 +1,29 @@
 /*
 Please create a `fonts` folder in the `public` folder then add the font files there.
+*/
 
-Example usage:
-
-@font-face {
-  font-family: "proxima_nova";
-  src: url("/fonts/proxima_nova_regular-webfont.woff2") format("woff2"),
-    url("proxima_nova_regular-webfont.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-	font-display: swap;
+.font-futura-regular {
+	font-family: 'futura-pt', sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
-*/
+/* Futura PT Book Oblique */
+.font-futura-regular-italic {
+	font-family: 'futura-pt', sans-serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
+/* Futura PT Bold */
+.font-futura-bold {
+	font-family: 'futura-pt-bold', sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+/* Futura PT Bold Oblique */
+.font-futura-bold-italic {
+	font-family: 'futura-pt-bold', sans-serif;
+	font-weight: 700;
+	font-style: italic;
+}

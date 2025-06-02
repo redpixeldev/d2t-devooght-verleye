@@ -4,7 +4,7 @@
 
 @theme {
 	--font-*: initial;
-	--font-heading: sans-serif;
+	--font-heading: "futura-pt", sans-serif;
 	--font-body: Raleway, sans-serif;
 
 	--color-brand-primary: #737373;
